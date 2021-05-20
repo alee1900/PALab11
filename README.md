@@ -21,6 +21,8 @@ modifying the name of a person, via a HTTP PUT request.
 deleting a person, via a HTTP DELETE request.
 - Test your services using the browser and/or Postman.
 
+I have solved everything in compulsory.
+
 ## Optional
 - Create REST services for inserting and reading relationships.
 - Create services for determining the first k most/least connected (popular) persons in the network.
