@@ -50,7 +50,7 @@ public class RelationshipService {
             }
         }
         try {
-            var statement = connection.prepareStatement("UPDATE relationships SET ANOTHERPERSONID=? WHERE ID=?");
+            var statement = connection.prepareStatement("UPDATE relationships SET SECOND_PERSON_ID=? WHERE FIRST_PERSON_ID=?");
             statement.setString(1, secondId);
             statement.setString(2, firstId);
             statement.executeQuery();
@@ -62,7 +62,7 @@ public class RelationshipService {
     public static void deleteRelationship(String relationshipId) {
         var connection = Database.getConnection();
         try {
-            var statement = connection.prepareStatement("DELETE FROM relationships WHERE ID=?");
+            var statement = connection.prepareStatement("DELETE FROM relationships WHERE ID_RELATIONSHIP=?");
             statement.setString(1, relationshipId);
             statement.executeQuery();
             relationshipList.removeIf(relationship -> relationship.getRelationshipId().equals(relationshipId));
