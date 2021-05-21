@@ -23,7 +23,7 @@ public class RelationshipService {
             statement.setString(3, secondId);
             statement.executeQuery();
         } catch (SQLException exception) {
-            System.out.println("Exception in addPerson method.");
+            System.out.println("Exception in addRelationship method.");
         }
     }
 
@@ -37,7 +37,7 @@ public class RelationshipService {
             statement.setString(3, relationship.getSecondPersonId());
             statement.executeQuery();
         } catch (SQLException exception) {
-            System.out.println("Exception in addPerson method.");
+            System.out.println("Exception in addRelationship method.");
         }
     }
 
@@ -55,7 +55,7 @@ public class RelationshipService {
             statement.setString(2, firstId);
             statement.executeQuery();
         } catch (SQLException exception) {
-            System.out.println("Exception in updateFriendship method.");
+            System.out.println("Exception in updateRelationship method.");
         }
     }
 
@@ -67,7 +67,7 @@ public class RelationshipService {
             statement.executeQuery();
             relationshipList.removeIf(relationship -> relationship.getRelationshipId().equals(relationshipId));
         } catch (SQLException exception) {
-            System.out.println("Exception in deleteFriendship method.");
+            System.out.println("Exception in deleteRelationship method.");
         }
     }
 
@@ -75,7 +75,7 @@ public class RelationshipService {
         if (relationshipList.size() > 0) {
             return relationshipList;
         } else {
-            throw new MyException("Empty table");
+            throw new MyException("The table is empty.");
         }
     }
 }
