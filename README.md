@@ -29,6 +29,8 @@ I have solved everything in compulsory.
 - Integrate the services into your previous project, invoking them using the support offered by Spring Boot.
 - Handle the exceptions using a RestControllerAdvice.
 
+I have solved the first and last bullet points in optional.
+
 ## Bonus
 - Write a service that determines in linear time all persons who are so important to the social network such that, if one of them were eliminated, the network would become disconnected.
 - Document your services using Swagger or a similar tool.
