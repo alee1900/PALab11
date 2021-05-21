@@ -10,7 +10,7 @@ import java.sql.Statement;
  */
 public class Database {
     public ResultSet resultSet;
-    private Connection connection;
+    private static Connection connection;
 
     private static final Database instance = new Database();
 
@@ -53,5 +53,9 @@ public class Database {
         } catch (Exception exception) {
             System.out.println("Error updating database.");
         }
+    }
+
+    public static Connection getConnection() {
+        return connection;
     }
 }
